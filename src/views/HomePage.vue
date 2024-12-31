@@ -6,6 +6,7 @@
 </script>
 
 <template>
+      <img src="https://media1.giphy.com/media/2zUn8hAwJwG4abiS0p/giphy_s.gif?cid=6c09b952wd8u2102ofrg0zs2b8e30y687hqo28nte3j2exrf&ep=v1_gifs_search&rid=giphy_s.gif&ct=g" alt="">
   
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -17,6 +18,7 @@
           Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
+      <img src="https://media1.giphy.com/media/2zUn8hAwJwG4abiS0p/giphy_s.gif?cid=6c09b952wd8u2102ofrg0zs2b8e30y687hqo28nte3j2exrf&ep=v1_gifs_search&rid=giphy_s.gif&ct=g" alt="">
       <img src="https://media1.giphy.com/media/2zUn8hAwJwG4abiS0p/giphy_s.gif?cid=6c09b952wd8u2102ofrg0zs2b8e30y687hqo28nte3j2exrf&ep=v1_gifs_search&rid=giphy_s.gif&ct=g" alt="">
       <div class="text-center">
         <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Napatarapon</h1>

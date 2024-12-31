@@ -1,14 +1,12 @@
 <script setup>
-import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
-const menu = ref(false);
 </script>
 
 <template>
-    <div class="bg-white h-screen flex flex-col">
-        <header class="sticky inset-x-0 top-0 z-50">
+    <div class=" h-screen flex flex-col">
+        <header class="sticky inset-x-0 top-0 z-50 bg-gradient-to-b text-white from-black/70 to-transparent">
             <nav class="flex items-center justify-between p-4 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <router-link :to="{ name: 'HomePage' }" class="-m-1.5 p-1.5">
@@ -19,21 +17,21 @@ const menu = ref(false);
                 </div>
                 <router-link :to="{ name: 'FollowingPage' }">
                     <button
-                        :class="{ 'font-bold text-black border-b-2 border-black': route.name === 'FollowingPage', 'text-gray-500': route.name === 'FollowingPage' }"
+                        :class="{ 'font-bold border-b-2 border-white': route.name === 'FollowingPage' }"
                         class="px-4 pb-1 transition">
                         Following
                     </button>
                 </router-link>
                 <router-link :to="{ name: 'HomePage' }">
                     <button
-                        :class="{ 'font-bold text-black border-b-2 border-black': route.name === 'HomePage', 'text-gray-500': route.name === 'HomePage' }"
+                        :class="{ 'font-bold border-b-2 border-white': route.name === 'HomePage' }"
                         class="px-4 pb-1 transition">
                         For You
                     </button>
                 </router-link>
                 <div class="flex lg:hidden">
                     <router-link type="button" :to="{ name: 'SearchPage' }"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        class="-m-2.5 inline-flex items-center text-white justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -44,46 +42,6 @@ const menu = ref(false);
                 </div>
                
             </nav>
-            <div class="lg:hidden" role="dialog" aria-modal="true" v-if="menu">
-                <div class="fixed inset-0 z-50"></div>
-                <div
-                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto"
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                        </a>
-
-                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="menu = false">
-                            <span class="sr-only">Close menu</span>
-                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                aria-hidden="true" data-slot="icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="space-y-2 py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                            </div>
-                            <div class="py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
-                                    in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
          <!-- Main Content -->
         <main class="flex-1 overflow-y-auto">

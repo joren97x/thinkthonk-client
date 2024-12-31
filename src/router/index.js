@@ -39,7 +39,7 @@ const router = createRouter({
         {
             path: '/for-you',
             component: () => import('../views/HomePage.vue'),
-            name: 'HomePage',
+            name: 'ForYouPage',
             meta: { layout: HomeLayout }
         },
         {
