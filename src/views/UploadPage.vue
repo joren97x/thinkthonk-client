@@ -1,32 +1,31 @@
-
 <script setup>
-
-
-
 </script>
 
 <template>
-  
-  <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+    <div>
+        <header class="absolute inset-x-0 top-0 z-50 bg-white shadow-md">
+            <nav class="flex items-center justify-start mt-2 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1 ml-2">
+                    <router-link :to="{ name: 'HomePage' }" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </router-link>
+                </div>
+                <div class="w-full text-center absolute font-bold">Upload</div>
+            </nav>
+            <div class="grid grid-cols-3 p-2 text-center mt-2">
+                <div>All</div>
+                <div>Videos</div>
+                <div>Photos</div>
+            </div>
+        </header>
+        <div class="mt-10">
+           
+            <div class="grid grid-cols-3 gap-1 mx-1">
+                <div class="bg-gray-300 h-40 w-full" v-for="n in 15" :key="n"></div>
+            </div>
         </div>
-      </div>
-      <div class="text-center">
-        <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Upload Page</h1>
-      </div>
     </div>
-    <router-link :to="{ name: 'LoginPage' }" class="underline mt-10">Adto sa Login Page</router-link>
-
-  
-  </div>
-
 </template>
-
-
-

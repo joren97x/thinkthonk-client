@@ -33,6 +33,18 @@
             </div>
         </div>
     </div>
+    <div class="text-center grid grid-cols-2 mx-5 gap-2 mt-3">
+        <div class="border-r border-gray-300 bg-gray-200 rounded-lg py-2">
+            <router-link :to="{ name: 'EditProfilePage' }">
+                Edit profile
+            </router-link>
+        </div>
+        <div class="border-r border-gray-300 bg-gray-200 rounded-lg py-2">
+            <router-link :to="{ name: 'FindFriendsPage' }">
+                Find friends
+            </router-link>
+        </div>
+    </div>
     <div class="text-center my-4">
         No bio yet.
     </div>

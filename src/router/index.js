@@ -1,58 +1,112 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomeLayout from "@/layouts/HomeLayout.vue";
 import AuthLayout from "@/layouts/AuthLayout.vue";
+import BottomNavigationBar from "@/layouts/BottomNavigationBar.vue";
+import HomeHeader from "@/layouts/HomeHeader.vue";
 
 const router = createRouter({
     history: createWebHistory(null),
     routes: [
         {
             path: '/',
-            component: () => import('../views/HomePage.vue'),
+            // component: () => import('../views/HomePage.vue'),
+            components: {
+                default: () => import('../views/HomePage.vue'),
+                HomeHeader: HomeHeader,
+                BottomNavigationBar: BottomNavigationBar
+            },
             name: 'HomePage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/profile',
-            component: () => import('../views/ProfilePage.vue'),
-            name: 'ProfilePage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/inbox',
-            component: () => import('../views/InboxPage.vue'),
-            name: 'InboxPage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/search',
-            component: () => import('../views/SearchPage.vue'),
-            name: 'SearchPage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/shop',
-            component: () => import('../views/ShopPage.vue'),
-            name: 'ShopPage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/for-you',
-            component: () => import('../views/HomePage.vue'),
-            name: 'ForYouPage',
-            meta: { layout: HomeLayout }
-        },
-        {
-            path: '/followings',
-            component: () => import('../views/FollowingPage.vue'),
-            name: 'FollowingPage',
-            meta: { layout: HomeLayout }
         },
         {
             path: '/upload',
             component: () => import('../views/UploadPage.vue'),
+            components: {
+                default: () => import('../views/UploadPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
             name: 'UploadPage',
-            meta: { layout: HomeLayout }
+        },
+        {
+            path: '/profile',
+            components: {
+                default: () => import('../views/ProfilePage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'ProfilePage',
+        },
+        {
+            path: '/edit-profile',
+            components: {
+                default: () => import('../views/EditProfilePage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'EditProfilePage',
+        },
+        {
+            path: '/find-friends',
+            components: {
+                default: () => import('../views/FindFriendsPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'FindFriendsPage',
+        },
+        {
+            path: '/inbox',
+            components: {
+                default: () => import('../views/InboxPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'InboxPage',
+        },
+        {
+            path: '/search',
+            components: {
+                default: () => import('../views/SearchPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'SearchPage',
+        },
+        {
+            path: '/shop',
+            components: {
+                default: () => import('../views/ShopPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'ShopPage',
+        },
+        {
+            path: '/shop/product/:id',
+            components: {
+                default: () => import('../views/ViewProductPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'ViewProductPage',
+        },
+        {
+            path: '/cart',
+            components: {
+                default: () => import('../views/CartPage.vue'),
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'CartPage',
+        },
+        {
+            path: '/for-you',
+            components: {
+                default: () => import('../views/HomePage.vue'),
+                HomeHeader: HomeHeader,
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'ForYouPage',
+        },
+        {
+            path: '/followings',
+            components: {
+                default: () => import('../views/FollowingPage.vue'),
+                HomeHeader: HomeHeader,
+                BottomNavigationBar: BottomNavigationBar
+            },
+            name: 'FollowingPage',
         },
         {
             path: '/login',

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="">
         <div class="snap-y snap-mandatory h-screen overflow-y-scroll scrollbar-hide">
             <div class="snap-center h-screen flex items-center justify-center bg-black">
                 <video src="fatcat.mp4" autoplay muted loop class="w-full h-full">

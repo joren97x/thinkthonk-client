@@ -1,7 +1,14 @@
+
 <template>
-    <main class="bg-opacity-30">
+    <main class="">
         <component :is="$route.meta.layout || 'div'">
-            <router-view></router-view>
+            <main class="flex flex-col">
+                <router-view name="HomeHeader"></router-view>
+                <div class="h-screen overflow-y-auto scrollbar-hide">
+                    <router-view></router-view>
+                </div>
+                <router-view name="BottomNavigationBar"></router-view>
+            </main>
         </component>
     </main>
 </template>
